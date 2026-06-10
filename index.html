@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhairya Rajyaguru | Portfolio - BCA Graduate & Developer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Dhairya Rajyaguru - BCA graduate skilled in Python, web development, face recognition systems, and cybersecurity. Projects in Flask, OpenCV, PHP, and MySQL.">
+    <meta name="keywords" content="Dhairya Rajyaguru, Portfolio, Developer, BCA Graduate, Python, Flask, OpenCV, Cybersecurity, Atmiya University, Rajkot">
+    <meta name="author" content="Dhairya Rajyaguru">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dhairya Rajyaguru | Portfolio">
+    <meta property="og:description" content="Explore projects, experience, and skills of Dhairya Rajyaguru — Python developer and BCA graduate from Atmiya University.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons for Modern SVG Graphics -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Abstract Background Effects -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-accent"><</span>Dhairya<span class="logo-accent"> /></span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Timeline</a></li>
+                    <li><a href="#certifications" class="nav-link">Achievements</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="menu-icon"></i>
+                    <i data-lucide="x" class="close-icon hidden"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="badge-container">
+                    <span class="hero-badge"><span class="pulse-dot"></span> BCA Graduate</span>
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight-text">Dhairya Rajyaguru</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    I am a <span id="typingText" class="gradient-text">Python Developer</span><span class="cursor">|</span>
+                </h2>
+                <p class="hero-desc">
+                    BCA graduate with hands-on experience in Python, web technologies, face-recognition systems, and cybersecurity — passionate about building real-world software solutions.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i data-lucide="arrow-right" class="btn-icon"></i>
+                    </a>
+                    <button onclick="window.print()" class="btn btn-secondary">
+                        <i data-lucide="download" class="btn-icon"></i>
+                        <span>Get Resume</span>
+                    </button>
+                </div>
+                <div class="social-links">
+                    <a href="mailto:dhairyrajyaguru99@gmail.com" class="social-icon" aria-label="Email Address">
+                        <i data-lucide="mail"></i>
+                    </a>
+                    <a href="tel:+919265780260" class="social-icon" aria-label="Phone Number">
+                        <i data-lucide="phone"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-card">
+                    <div class="card-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="visual-code">
+                        <pre><code><span class="code-keyword">const</span> developer = {
+    name: <span class="code-string">"Dhairya Rajyaguru"</span>,
+    role: <span class="code-string">"BCA Graduate"</span>,
+    location: <span class="code-string">"Rajkot, Gujarat, India"</span>,
+    skills: [
+        <span class="code-string">"Python"</span>, <span class="code-string">"Flask"</span>,
+        <span class="code-string">"OpenCV"</span>, <span class="code-string">"PHP"</span>
+    ],
+    passionateAbout: <span class="code-string">"Innovation"</span>
+};
+
+<span class="code-keyword">function</span> <span class="code-func">solveProblem</span>(challenge) {
+    <span class="code-keyword">return</span> <span class="code-keyword">new</span> <span class="code-class">CreativeSolution</span>(challenge);
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding scroll-reveal">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-info">
+                    <h3>Building Real-World Software Solutions</h3>
+                    <p>BCA graduate from Atmiya University with practical experience in Python development, web technologies, face-recognition systems, and cybersecurity. Strong analytical and problem-solving skills with a passion for building real-world software solutions and continuously learning emerging technologies.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-num">4+</span>
+                            <span class="stat-label">Hackathons Completed</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">2</span>
+                            <span class="stat-label">Major Tech Projects</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">73%</span>
+                            <span class="stat-label">BCA — Atmiya University</span>
+                        </div>
+                    </div>
+
+                    <div class="languages-spoken">
+                        <h4>Languages:</h4>
+                        <div class="lang-tags">
+                            <span class="lang-tag">English</span>
+                            <span class="lang-tag">Hindi</span>
+                            <span class="lang-tag">Gujarati</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-attributes">
+                    <div class="attribute-card">
+                        <div class="attr-icon-box blue">
+                            <i data-lucide="brain"></i>
+                        </div>
+                        <div class="attr-content">
+                            <h4>Problem Solving & Analytics</h4>
+                            <p>Applying data structures, analytical thinking, and logical reasoning to solve complex technical challenges.</p>
+                        </div>
+                    </div>
+                    <div class="attribute-card">
+                        <div class="attr-icon-box purple">
+                            <i data-lucide="shield"></i>
+                        </div>
+                        <div class="attr-content">
+                            <h4>Cybersecurity</h4>
+                            <p>Hands-on experience with vulnerability assessments, ethical hacking concepts, and security tools from Vzeya Technologies.</p>
+                        </div>
+                    </div>
+                    <div class="attribute-card">
+                        <div class="attr-icon-box teal">
+                            <i data-lucide="code-2"></i>
+                        </div>
+                        <div class="attr-content">
+                            <h4>Web & Software Development</h4>
+                            <p>Building full-stack applications with Python, Flask, PHP, MySQL, and modern HTML/CSS interfaces.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding scroll-reveal">
+            <h2 class="section-title">My Skills</h2>
+            <p class="section-subtitle">Programming languages, web technologies, frameworks, and tools from my academic and professional experience.</p>
+            
+            <div class="skills-tabs">
+                <button class="skills-tab-btn active" data-tab="programming">Programming & Tech</button>
+                <button class="skills-tab-btn" data-tab="design">Tools & Concepts</button>
+            </div>
+
+            <div class="skills-content">
+                <div class="skills-grid active" id="programming-skills">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i data-lucide="code-2" class="skill-icon text-blue"></i>
+                            <h4>Python</h4>
+                        </div>
+                        <p>Core programming, automation, scripting, and computer vision integration using OpenCV and Flask.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i data-lucide="database" class="skill-icon text-teal"></i>
+                            <h4>SQL</h4>
+                        </div>
+                        <p>Database schema design, queries, optimization, and integration with backend applications.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i data-lucide="server" class="skill-icon text-purple"></i>
+                            <h4>PHP</h4>
+                        </div>
+                        <p>Server-side web development, form handling, and MySQL database integration for full-stack applications.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i data-lucide="globe" class="skill-icon text-pink"></i>
+                            <h4>HTML, CSS & JavaScript</h4>
+                        </div>
+                        <p>Semantic and responsive web structure, styling, and interactive UI development.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i data-lucide="scan-face" class="skill-icon text-orange"></i>
+                            <h4>Flask & OpenCV</h4>
+                        </div>
+                        <p>Building web APIs and real-time face recognition pipelines for automated attendance systems.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i data-lucide="braces" class="skill-icon text-blue"></i>
+                            <h4>C, C++ & C#</h4>
+                        </div>
+                        <p>Foundational programming, data structures, and object-oriented development concepts.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-progress" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i data-lucide="coffee" class="skill-icon text-teal"></i>
+                            <h4>Java (Basics)</h4>
+                        </div>
+                        <p>Understanding of object-oriented principles, classes, and core computational logic.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-progress" style="width: 55%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-grid" id="design-skills">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i data-lucide="terminal" class="skill-icon text-blue"></i>
+                            <h4>VS Code</h4>
+                        </div>
+                        <p>Primary development environment for Python, web, and database projects with extensions and debugging.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i data-lucide="layers" class="skill-icon text-purple"></i>
+                            <h4>Canva</h4>
+                        </div>
+                        <p>Creating visual collateral, presentations, banners, and design assets for projects and events.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i data-lucide="layout" class="skill-icon text-teal"></i>
+                            <h4>MS Office</h4>
+                        </div>
+                        <p>Reports in Word, data management in Excel, and professional slide design in PowerPoint.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i data-lucide="brain" class="skill-icon text-orange"></i>
+                            <h4>Core Concepts</h4>
+                        </div>
+                        <p>Data structures, networking basics, problem solving, and analytical thinking applied to real projects.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding scroll-reveal">
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-subtitle">Featured projects highlighting computer vision, full-stack development, and accessibility solutions.</p>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-project="attendance">
+                    <div class="project-img-container">
+                        <div class="project-overlay-glow"></div>
+                        <div class="project-placeholder-img text-gradient-bg-2">
+                            <i data-lucide="scan-face" class="proj-bg-icon"></i>
+                        </div>
+                        <span class="project-badge">Computer Vision</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Face Recognizing Attendance System</h3>
+                        <p class="project-short-desc">Developed an automated attendance management system using Python, OpenCV, Flask, and face recognition technology. Enabled real-time attendance tracking and improved accuracy over manual methods.</p>
+                        <div class="project-tags">
+                            <span class="proj-tag">Python</span>
+                            <span class="proj-tag">OpenCV</span>
+                            <span class="proj-tag">Flask</span>
+                        </div>
+                        <button class="btn btn-text open-project-modal" data-project-id="attendance">
+                            <span>Explore Details</span>
+                            <i data-lucide="arrow-up-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="audiobook">
+                    <div class="project-img-container">
+                        <div class="project-overlay-glow"></div>
+                        <div class="project-placeholder-img text-gradient-bg-1">
+                            <i data-lucide="headphones" class="proj-bg-icon"></i>
+                        </div>
+                        <span class="project-badge">Featured Project</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Audiobook Web Application</h3>
+                        <p class="project-short-desc">Developed a multilingual audiobook platform using PHP, MySQL, and Python. Implemented OCR, Text-to-Speech, PDF-to-Speech, and Text Summarization features supporting English, Hindi, and Gujarati languages.</p>
+                        <div class="project-tags">
+                            <span class="proj-tag">PHP</span>
+                            <span class="proj-tag">MySQL</span>
+                            <span class="proj-tag">Python</span>
+                        </div>
+                        <button class="btn btn-text open-project-modal" data-project-id="audiobook">
+                            <span>Explore Details</span>
+                            <i data-lucide="arrow-up-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Timeline Section -->
+        <section id="experience" class="timeline-section section-padding scroll-reveal">
+            <h2 class="section-title">Education & Experience</h2>
+            <p class="section-subtitle">A chronological view of my academic foundation, internships, and professional growth.</p>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item left scroll-reveal">
+                    <div class="timeline-dot bg-teal-glow"></div>
+                    <div class="timeline-card">
+                        <div class="time-header">
+                            <span class="time-duration">Dec 2025 – Jan 2026</span>
+                            <span class="timeline-category work">Internship</span>
+                        </div>
+                        <h3>HTML/CSS Developer Intern</h3>
+                        <h4 class="time-org">Clinchbridge</h4>
+                        <ul class="time-bullets">
+                            <li>Contributed to web solution development, testing, research, and documentation.</li>
+                            <li>Built and refined responsive HTML/CSS interfaces for client-facing web solutions.</li>
+                            <li>Collaborated on testing workflows and technical documentation for project deliverables.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item right scroll-reveal">
+                    <div class="timeline-dot bg-blue-glow"></div>
+                    <div class="timeline-card">
+                        <div class="time-header">
+                            <span class="time-duration">Jun 2025 – Sep 2025</span>
+                            <span class="timeline-category work">Work Experience</span>
+                        </div>
+                        <h3>Administrative Staff</h3>
+                        <h4 class="time-org">Aarambh Vidhyapith, Rajkot</h4>
+                        <ul class="time-bullets">
+                            <li>Managed academic schedules, digital platforms, and technical issue resolution.</li>
+                            <li>Improved communication between faculty and students for smoother operations.</li>
+                            <li>Supported online learning and day-to-day administrative workflows.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item left scroll-reveal">
+                    <div class="timeline-dot bg-teal-glow"></div>
+                    <div class="timeline-card">
+                        <div class="time-header">
+                            <span class="time-duration">May 2025</span>
+                            <span class="timeline-category work">Internship</span>
+                        </div>
+                        <h3>Cybersecurity Training & Internship</h3>
+                        <h4 class="time-org">Vzeya Technologies</h4>
+                        <ul class="time-bullets">
+                            <li>Performed vulnerability assessments and gained practical exposure to ethical hacking concepts.</li>
+                            <li>Worked with cybersecurity tools in a hands-on training environment.</li>
+                            <li>Applied security assessment techniques to understand real-world threat landscapes.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item right scroll-reveal">
+                    <div class="timeline-dot bg-purple-glow"></div>
+                    <div class="timeline-card">
+                        <div class="time-header">
+                            <span class="time-duration">2023 – 2026</span>
+                            <span class="timeline-category edu">Education</span>
+                        </div>
+                        <h3>Bachelor of Computer Applications (BCA)</h3>
+                        <h4 class="time-org">Atmiya University, Rajkot</h4>
+                        <p class="time-desc">Completed BCA with 73%. Focused on programming, databases, web technologies, and software development through academic projects and hackathons.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left scroll-reveal">
+                    <div class="timeline-dot bg-blue-glow"></div>
+                    <div class="timeline-card">
+                        <div class="time-header">
+                            <span class="time-duration">Jan 2023 – Apr 2024</span>
+                            <span class="timeline-category work">Work Experience</span>
+                        </div>
+                        <h3>Sales Executive</h3>
+                        <h4 class="time-org">Vijay Electronics</h4>
+                        <ul class="time-bullets">
+                            <li>Assisted customers in selecting products and explained features clearly.</li>
+                            <li>Maintained strong customer relationships and supported informed purchase decisions.</li>
+                            <li>Contributed to sales growth through consistent service and product knowledge.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item right scroll-reveal">
+                    <div class="timeline-dot bg-orange-glow"></div>
+                    <div class="timeline-card">
+                        <div class="time-header">
+                            <span class="time-duration">Completed</span>
+                            <span class="timeline-category edu">Education</span>
+                        </div>
+                        <h3>Higher Secondary (Commerce) & Secondary Education</h3>
+                        <h4 class="time-org">Rajkot, Gujarat</h4>
+                        <p class="time-desc">Higher Secondary (Commerce) – 74%. Secondary Education – 64%.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Achievements Section -->
+        <section id="certifications" class="certifications-section section-padding scroll-reveal">
+            <h2 class="section-title">Certifications & Achievements</h2>
+            <p class="section-subtitle">Hackathons, certifications, and competitive programming achievements.</p>
+            
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <div class="cert-icon-container">
+                        <i data-lucide="award" class="cert-icon text-orange"></i>
+                    </div>
+                    <h3>NASA Space Apps Challenge (Global Hackathon) 2024 & 2025</h3>
+                    <p class="cert-issuer">Nirma University</p>
+                    <p class="cert-desc">Participated in the worldwide NASA Space Apps Challenge in both 2024 and 2025, collaborating on science and technology problem-solving.</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon-container">
+                        <i data-lucide="trophy" class="cert-icon text-teal"></i>
+                    </div>
+                    <h3>SSIP Hackathon</h3>
+                    <p class="cert-issuer">Darshan University</p>
+                    <p class="cert-desc">Competed in the Student Start-up and Innovation Policy hackathon, developing innovative solutions for state-level challenges.</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon-container">
+                        <i data-lucide="medal" class="cert-icon text-blue"></i>
+                    </div>
+                    <h3>SSIP Hackathon</h3>
+                    <p class="cert-issuer">Atmiya University</p>
+                    <p class="cert-desc">Participated in Atmiya University's SSIP hackathon, designing and building localized technology solutions.</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon-container">
+                        <i data-lucide="rocket" class="cert-icon text-purple"></i>
+                    </div>
+                    <h3>Atmiya Hackathon 2.0</h3>
+                    <p class="cert-issuer">Atmiya University</p>
+                    <p class="cert-desc">Competed in Atmiya Hackathon 2.0, applying programming and teamwork skills to build working prototypes under time constraints.</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon-container">
+                        <i data-lucide="smartphone" class="cert-icon text-teal"></i>
+                    </div>
+                    <h3>Android App Development</h3>
+                    <p class="cert-issuer">Simplilearn</p>
+                    <p class="cert-desc">Completed certification training in Android app development fundamentals and mobile application workflows.</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon-container">
+                        <i data-lucide="book-open" class="cert-icon text-orange"></i>
+                    </div>
+                    <h3>Data Structures in C</h3>
+                    <p class="cert-issuer">Great Learning</p>
+                    <p class="cert-desc">Earned certification in data structures using C, strengthening algorithmic thinking and foundational CS concepts.</p>
+                </div>
+               
+                <div class="cert-card">
+                    <div class="cert-icon-container">
+                        <i data-lucide="book-open" class="cert-icon text-orange"></i>
+                    </div>
+                    <h3> Data Analytics</h3>
+                    <p class="cert-issuer">Deloitte</p>
+                    <p class="cert-desc">Earned certification in data analytics, enhancing skills in data interpretation and business intelligence.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding scroll-reveal">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Have a project in mind, an opportunity, or just want to connect? Drop a message!</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info-panel">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out via direct phone call, email, or by filling out the adjacent form.</p>
+                    
+                    <div class="info-details">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">Email Me</span>
+                                <a href="mailto:dhairyrajyaguru99@gmail.com" class="info-link">dhairyrajyaguru99@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">Call Me</span>
+                                <a href="tel:+919265780260" class="info-link">+91 9265780260</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">Location</span>
+                                <span class="info-val">Rajkot, Gujarat, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-panel">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                            <span class="error-msg" id="nameError">Name is required</span>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                                <span class="error-msg" id="emailError">Please enter a valid email</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required placeholder="Project Proposal">
+                                <span class="error-msg" id="subjectError">Subject is required</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Describe your idea..."></textarea>
+                            <span class="error-msg" id="messageError">Message is required</span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                            <span>Send Message</span>
+                            <i data-lucide="send" class="btn-icon"></i>
+                        </button>
+
+                        <div id="formFeedback" class="form-feedback hidden">
+                            <div class="feedback-content">
+                                <i data-lucide="check-circle" class="feedback-icon"></i>
+                                <p>Message sent successfully! I will respond to your email soon.</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Modals Container -->
+    <div id="projectModal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <button class="modal-close" id="modalClose" aria-label="Close Modal">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Print Ready Resume Layout -->
+    <div id="printResume" class="print-resume-only">
+        <div class="print-header">
+            <h1>Dhairya Rajyaguru</h1>
+            <p>dhairyrajyaguru99@gmail.com | +91 9265780260 | Rajkot, Gujarat, India</p>
+        </div>
+        <hr>
+        <div class="print-section">
+            <h2>Professional Summary</h2>
+            <p>BCA graduate from Atmiya University with practical experience in Python development, web technologies, face-recognition systems, and cybersecurity. Strong analytical and problem-solving skills with a passion for building real-world software solutions and continuously learning emerging technologies.</p>
+        </div>
+        <div class="print-section">
+            <h2>Education</h2>
+            <p><strong>Bachelor of Computer Applications (BCA)</strong> – Atmiya University, Rajkot (2023–2026) – 73%</p>
+            <p><strong>Higher Secondary (Commerce)</strong> – 74%</p>
+            <p><strong>Secondary Education</strong> – 64%</p>
+        </div>
+        <div class="print-section">
+            <h2>Work Experience</h2>
+            <p><strong>Administrative Staff</strong> – Aarambh Vidhyapith, Rajkot (Jun 2025 – Sep 2025)<br>Managed academic schedules, digital platforms, and technical issue resolution while improving communication between faculty and students.</p>
+            <p><strong>Sales Executive</strong> – Vijay Electronics (Jan 2023 – Apr 2024)<br>Assisted customers in selecting products, explained features, and maintained strong customer relationships.</p>
+        </div>
+        <div class="print-section">
+            <h2>Internships & Training</h2>
+            <p><strong>Cybersecurity Training & Internship</strong> – Vzeya Technologies (May 2025)<br>Performed vulnerability assessments and gained practical exposure to ethical hacking concepts and cybersecurity tools.</p>
+            <p><strong>HTML/CSS Developer Intern</strong> – Clinchbridge (Dec 2025 – Jan 2026)<br>Contributed to web solution development, testing, research, and documentation.</p>
+        </div>
+        <div class="print-section">
+            <h2>Projects</h2>
+            <p><strong>Face Recognizing Attendance System</strong> (Python, OpenCV, Flask)<br>Developed an automated attendance management system using Python, OpenCV, Flask, and face recognition technology. Enabled real-time attendance tracking and improved accuracy over manual methods.</p>
+            <p><strong>Audiobook Web Application</strong> (PHP, MySQL, Python)<br>Developed a multilingual audiobook platform using PHP, MySQL, and Python. Implemented OCR, Text-to-Speech, PDF-to-Speech, and Text Summarization features supporting English, Hindi, and Gujarati languages.</p>
+        </div>
+        <div class="print-section">
+            <h2>Skills & Certifications</h2>
+            <p><strong>Programming:</strong> Python, SQL, PHP, C, C++, C#, Java (Basics)</p>
+            <p><strong>Web Technologies:</strong> HTML, CSS, JavaScript</p>
+            <p><strong>Frameworks & Tools:</strong> Flask, OpenCV, VS Code, MS Office, Canva</p>
+            <p><strong>Languages:</strong> English, Hindi, Gujarati</p>
+            <p><strong>Certifications:</strong> NASA Space Apps Challenge 2024 & 2025, SSIP Hackathon (Darshan & Atmiya University), Atmiya Hackathon 2.0, Android App Development (Simplilearn), Data Structures in C (Great Learning), Data Analytics (Deloitte)</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Dhairya Rajyaguru. All Rights Reserved.</p>
+            <p>Designed with ❤️ using HTML, CSS, and Vanilla JavaScript.</p>
+            <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+                <i data-lucide="chevron-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
