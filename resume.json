@@ -1,0 +1,274 @@
+{
+  "name": "Dhairya Rajyaguru",
+  "email": "dhairyrajyaguru01@gmail.com",
+  "phone": "+91 9265780260",
+  "location": "Rajkot, Gujarat, India",
+  "github": "https://github.com/dhairyrajyaguru99",
+  "linkedin": "https://www.linkedin.com/in/dhairyrajyaguru",
+  "objective": "Aspiring Software Developer | Python & Data Analysis | Passionate About Building Real-World Projects | Open to Opportunities.",
+  "skills": {
+    "programming": [
+      {
+        "name": "Python",
+        "description": "Core programming, automation, scripting, data analysis, and computer vision integration using OpenCV and Flask.",
+        "icon": "code-2",
+        "color": "text-blue",
+        "level": "85%"
+      },
+      {
+        "name": "SQL",
+        "description": "Database schema design, queries, optimization, and integration with backend applications.",
+        "icon": "database",
+        "color": "text-teal",
+        "level": "80%"
+      },
+      {
+        "name": "PHP",
+        "description": "Server-side web development, form handling, and MySQL database integration for full-stack applications.",
+        "icon": "server",
+        "color": "text-purple",
+        "level": "75%"
+      },
+      {
+        "name": "HTML, CSS & JavaScript",
+        "description": "Semantic and responsive web structure, styling, and interactive UI development.",
+        "icon": "globe",
+        "color": "text-pink",
+        "level": "85%"
+      },
+      {
+        "name": "Flask & OpenCV",
+        "description": "Building web APIs and real-time face recognition pipelines for automated attendance systems.",
+        "icon": "scan-face",
+        "color": "text-orange",
+        "level": "80%"
+      },
+      {
+        "name": "C, C++ & C#",
+        "description": "Foundational programming, data structures, and object-oriented development concepts.",
+        "icon": "braces",
+        "color": "text-blue",
+        "level": "65%"
+      },
+      {
+        "name": "Java (Basics)",
+        "description": "Understanding of object-oriented principles, classes, and core computational logic.",
+        "icon": "coffee",
+        "color": "text-teal",
+        "level": "55%"
+      }
+    ],
+    "design": [
+      {
+        "name": "VS Code",
+        "description": "Primary development environment for Python, web, and database projects with extensions and debugging.",
+        "icon": "terminal",
+        "color": "text-blue",
+        "level": "90%"
+      },
+      {
+        "name": "Canva",
+        "description": "Creating visual collateral, presentations, banners, and design assets for projects and events.",
+        "icon": "layers",
+        "color": "text-purple",
+        "level": "85%"
+      },
+      {
+        "name": "MS Office",
+        "description": "Reports in Word, data management in Excel, and professional slide design in PowerPoint.",
+        "icon": "layout",
+        "color": "text-teal",
+        "level": "85%"
+      },
+      {
+        "name": "Core Concepts",
+        "description": "Data structures, networking basics, problem solving, and analytical thinking applied to real projects.",
+        "icon": "brain",
+        "color": "text-orange",
+        "level": "80%"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "attendance",
+      "title": "Face Recognizing Attendance System",
+      "subtitle": "Python, OpenCV, Flask",
+      "badge": "Computer Vision",
+      "bgClass": "text-gradient-bg-2",
+      "icon": "scan-face",
+      "description": "Developed an automated attendance management system using Python, OpenCV, Flask, and face recognition technology. Enabled real-time attendance tracking and improved accuracy over manual methods."
+    },
+    {
+      "id": "audiobook",
+      "title": "Audiobook Web Application",
+      "subtitle": "PHP, MySQL, Python",
+      "badge": "Featured Project",
+      "bgClass": "text-gradient-bg-1",
+      "icon": "headphones",
+      "description": "Developed a multilingual audiobook platform using PHP, MySQL, and Python. Implemented OCR, Text-to-Speech, PDF-to-Speech, and Text Summarization features supporting English, Hindi, and Gujarati languages."
+    }
+  ],
+  "timeline": [
+    {
+      "type": "work",
+      "duration": "Jun 2026 – Present",
+      "category": "Work Experience",
+      "categoryClass": "work",
+      "dotColorClass": "bg-teal-glow",
+      "side": "left",
+      "title": "Management Information System Coordinator",
+      "organization": "Uneecops Technologies (Gov. contract)",
+      "bullets": [
+        "Coordinate daily deliverables with the Delhi team and manage statewide school forms under a government contract."
+      ]
+    },
+    {
+      "type": "work",
+      "duration": "Dec 2025 – Jan 2026",
+      "category": "Internship",
+      "categoryClass": "work",
+      "dotColorClass": "bg-blue-glow",
+      "side": "right",
+      "title": "HTML/CSS Developer Intern",
+      "organization": "Clinchbridge",
+      "bullets": [
+        "Contributed to web solution development, testing, research, and documentation."
+      ]
+    },
+    {
+      "type": "work",
+      "duration": "Jun 2025 – Sep 2025",
+      "category": "Work Experience",
+      "categoryClass": "work",
+      "dotColorClass": "bg-teal-glow",
+      "side": "left",
+      "title": "Administrative Staff",
+      "organization": "Aarambh Vidhyapith, Rajkot",
+      "bullets": [
+        "Managed academic schedules, digital platforms, and technical issue resolution while improving communication between faculty and students."
+      ]
+    },
+    {
+      "type": "work",
+      "duration": "May 2025",
+      "category": "Internship",
+      "categoryClass": "work",
+      "dotColorClass": "bg-blue-glow",
+      "side": "right",
+      "title": "Cybersecurity Training & Internship Experience",
+      "organization": "Vzeya Technologies",
+      "bullets": [
+        "Performed vulnerability assessments and gained practical exposure to ethical hacking concepts and cybersecurity tools."
+      ]
+    },
+    {
+      "type": "education",
+      "duration": "2026 – Present",
+      "category": "Education",
+      "categoryClass": "edu",
+      "dotColorClass": "bg-purple-glow",
+      "side": "left",
+      "title": "Master of Computer Applications (MCA)",
+      "organization": "J.G. University, Ahmedabad",
+      "desc": "Currently pursuing MCA, building on BCA foundations in software development, data analysis, and advanced computing."
+    },
+    {
+      "type": "education",
+      "duration": "2023 – 2026",
+      "category": "Education",
+      "categoryClass": "edu",
+      "dotColorClass": "bg-purple-glow",
+      "side": "right",
+      "title": "Bachelor of Computer Applications (BCA)",
+      "organization": "Atmiya University, Rajkot",
+      "desc": "Completed BCA with 73%."
+    },
+    {
+      "type": "work",
+      "duration": "Jan 2023 – Apr 2024",
+      "category": "Work Experience",
+      "categoryClass": "work",
+      "dotColorClass": "bg-teal-glow",
+      "side": "left",
+      "title": "Sales Executive",
+      "organization": "Vijay Electronics",
+      "bullets": [
+        "Assisted customers in selecting products, explained features, and maintained strong customer relationships."
+      ]
+    },
+    {
+      "type": "education",
+      "duration": "Completed",
+      "category": "Education",
+      "categoryClass": "edu",
+      "dotColorClass": "bg-orange-glow",
+      "side": "right",
+      "title": "Higher Secondary (Commerce)",
+      "organization": "Rajkot, Gujarat",
+      "desc": "Completed with 74%."
+    },
+    {
+      "type": "education",
+      "duration": "Completed",
+      "category": "Education",
+      "categoryClass": "edu",
+      "dotColorClass": "bg-orange-glow",
+      "side": "left",
+      "title": "Secondary Education",
+      "organization": "Rajkot, Gujarat",
+      "desc": "Completed with 64%."
+    }
+  ],
+  "achievements": [
+    {
+      "title": "NASA Space Apps Challenge 2024 & 2025",
+      "issuer": "Global Hackathon",
+      "icon": "award",
+      "iconColor": "text-orange",
+      "description": "Participated in the worldwide NASA Space Apps Challenge in both 2024 and 2025."
+    },
+    {
+      "title": "SSIP Hackathon",
+      "issuer": "Darshan University",
+      "icon": "trophy",
+      "iconColor": "text-teal",
+      "description": "Competed in the Student Start-up and Innovation Policy hackathon at Darshan University."
+    },
+    {
+      "title": "SSIP Hackathon",
+      "issuer": "Atmiya University",
+      "icon": "medal",
+      "iconColor": "text-blue",
+      "description": "Participated in Atmiya University's SSIP hackathon."
+    },
+    {
+      "title": "Atmiya Hackathon 2.0",
+      "issuer": "Atmiya University",
+      "icon": "rocket",
+      "iconColor": "text-purple",
+      "description": "Competed in Atmiya Hackathon 2.0, building working prototypes under time constraints."
+    },
+    {
+      "title": "Android App Development",
+      "issuer": "Simplilearn",
+      "icon": "smartphone",
+      "iconColor": "text-teal",
+      "description": "Completed certification training in Android app development fundamentals."
+    },
+    {
+      "title": "Data Structures in C",
+      "issuer": "Great Learning",
+      "icon": "book-open",
+      "iconColor": "text-orange",
+      "description": "Earned certification in data structures using C."
+    },
+    {
+      "title": "Deloitte Data Analytics Job Simulation",
+      "issuer": "Forage — March 2026",
+      "icon": "bar-chart-3",
+      "iconColor": "text-teal",
+      "description": "Completed Deloitte's data analytics job simulation, gaining hands-on experience in data interpretation and business intelligence."
+    }
+  ]
+}
