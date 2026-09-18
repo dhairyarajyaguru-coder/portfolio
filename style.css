@@ -1424,8 +1424,8 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -1716,6 +1716,11 @@ footer {
    Responsive Breakpoints
    ========================================================================== */
 @media (max-width: 992px) {
+    .bg-glow {
+        min-width: 0;
+        max-width: 100vw;
+    }
+
     .section-padding {
         padding-top: 80px;
         padding-bottom: 80px;
