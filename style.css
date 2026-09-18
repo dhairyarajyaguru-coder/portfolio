@@ -1891,6 +1891,8 @@ footer {
 
 /* Touch devices should not retain desktop hover states after a tap. */
 @media (hover: none) and (pointer: coarse) {
+    .btn-primary:hover,
+    .btn-secondary:hover,
     .theme-toggle-btn:hover,
     .social-icon:hover,
     .visual-card:hover,
@@ -1903,7 +1905,9 @@ footer {
     .contact-social-btn:hover,
     .modal-close:hover,
     .footer-social-icon:hover,
-    .back-to-top:hover {
+    .back-to-top:hover,
+    .project-card:hover .project-placeholder-img,
+    .project-card:hover .proj-bg-icon {
         transform: none;
         box-shadow: none;
     }
