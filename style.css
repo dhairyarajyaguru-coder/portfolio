@@ -78,6 +78,10 @@
     scroll-behavior: smooth;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--bg-dark);
     color: var(--text-primary);
@@ -494,6 +498,12 @@ a {
     border-color: var(--color-primary);
     transform: translateY(-3px) scale(1.05);
     box-shadow: var(--shadow-neon-primary);
+}
+
+.brand-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
 }
 
 .hero-visual {
@@ -1706,6 +1716,11 @@ footer {
    Responsive Breakpoints
    ========================================================================== */
 @media (max-width: 992px) {
+    .section-padding {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
     .hero-section {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1735,6 +1750,18 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .skills-content .skills-grid,
+    .projects-grid,
+    .certs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .skill-card,
+    .project-card,
+    .cert-card {
+        min-width: 0;
+    }
+
     .timeline-line {
         left: 24px;
     }
@@ -1757,6 +1784,37 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .bg-glow {
+        width: 55vw;
+        min-width: 160px;
+    }
+
+    .section-padding {
+        padding: 72px 16px;
+    }
+
+    .hero-section {
+        padding: 96px 16px 48px;
+    }
+
+    .hero-section > * {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero-content,
+    .hero-title,
+    .hero-subtitle,
+    .hero-desc {
+        min-width: 0;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .visual-card {
+        transform: none;
+    }
+
     .navbar {
         height: 60px;
     }
@@ -1807,5 +1865,46 @@ footer {
 
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+
+    .skills-content .skills-grid,
+    .projects-grid,
+    .certs-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .skills-tabs,
+    .contact-social-links,
+    .lang-tags {
+        flex-wrap: wrap;
+    }
+
+    .contact-info-panel,
+    .contact-form-panel {
+        padding: 24px;
+    }
+
+    .modal-body {
+        padding: 24px;
+    }
+}
+
+/* Touch devices should not retain desktop hover states after a tap. */
+@media (hover: none) and (pointer: coarse) {
+    .theme-toggle-btn:hover,
+    .social-icon:hover,
+    .visual-card:hover,
+    .stat-card:hover,
+    .attribute-card:hover,
+    .skill-card:hover,
+    .project-card:hover,
+    .timeline-card:hover,
+    .cert-card:hover,
+    .contact-social-btn:hover,
+    .modal-close:hover,
+    .footer-social-icon:hover,
+    .back-to-top:hover {
+        transform: none;
+        box-shadow: none;
     }
 }
