@@ -82,6 +82,12 @@ html {
     overflow-x: hidden;
 }
 
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+}
+
 body {
     background-color: var(--bg-dark);
     color: var(--text-primary);
@@ -90,6 +96,13 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+img,
+video,
+svg {
+    max-width: 100%;
+    height: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1791,7 +1804,8 @@ footer {
 @media (max-width: 768px) {
     html,
     body {
-        width: auto;
+        width: 100%;
+        max-width: 100%;
         min-width: 0;
     }
 
@@ -1805,7 +1819,8 @@ footer {
     }
 
     .hero-section {
-        width: auto;
+        width: 100%;
+        max-width: 100%;
         min-height: auto;
         height: auto;
         padding: 96px 16px 48px;
@@ -1826,7 +1841,21 @@ footer {
     }
 
     .visual-card {
+        width: 100%;
+        max-width: 100%;
         transform: none;
+        overflow-x: auto;
+    }
+
+    .projects-grid,
+    .skills-content .skills-grid,
+    .certs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-container {
+        width: 100%;
+        max-width: 100%;
     }
 
     .navbar {
@@ -1900,6 +1929,38 @@ footer {
 
     .modal-body {
         padding: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-padding {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero-section {
+        padding: 70px 16px 40px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 19px;
+    }
+
+    .visual-card {
+        padding: 18px;
+    }
+
+    pre,
+    code {
+        max-width: 100%;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }
 }
 
