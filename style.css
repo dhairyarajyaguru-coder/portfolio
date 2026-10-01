@@ -162,7 +162,7 @@ a {
 .bg-glow-2 {
     background-color: var(--color-secondary);
     top: 45%;
-    right: 5vw;
+    right: -10%;
     animation-delay: 5s;
 }
 
@@ -1267,7 +1267,6 @@ a {
 .info-text {
     display: flex;
     flex-direction: column;
-    min-width: 0;
 }
 
 .info-label {
@@ -1279,7 +1278,6 @@ a {
 .info-link {
     font-size: 16px;
     font-weight: 600;
-    overflow-wrap: anywhere;
 }
 
 .info-link:hover {
@@ -1812,7 +1810,8 @@ footer {
     }
 
     .bg-glow {
-        display: none;
+        width: 55vw;
+        min-width: 160px;
     }
 
     .section-padding {
