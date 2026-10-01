@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Dhairya Rajyaguru favicon">
+  <defs>
+    <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#6a5cff"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#0b1020"/>
+  <path d="M18 16h12.5c10.2 0 18.5 7.9 18.5 18.2S40.7 52.3 30.5 52.3H18V16zm9 8.8v18.8h3.5c6.1 0 10.8-4.5 10.8-9.4s-4.7-9.4-10.8-9.4H27z" fill="url(#g)"/>
+  <path d="M27 18.5v27h3c7.5 0 13.5-5.6 13.5-13.5S37.5 18.5 30 18.5h-3zm8.5 8.3c3.1 0 5.5 2.7 5.5 5.4 0 2.8-2.4 5.4-5.5 5.4h-1.1v-10.8h1.1z" fill="#ffffff" opacity="0.9"/>
+</svg>

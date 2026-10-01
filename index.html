@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b1020">
     <title>Dhairya Rajyaguru | Portfolio - Software Developer & MCA Student</title>
+    <link rel="canonical" href="https://portfolio-ivory-omega-37b26ir96l.vercel.app/">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Portfolio of Dhairya Rajyaguru - Aspiring Software Developer skilled in Python, data analysis, web development, and real-world projects. MCA student at J.G. University.">
+    <meta name="description" content="Portfolio of Dhairya Rajyaguru — aspiring software developer focused on Python, data analysis, web development, and real-world project delivery.">
     <meta name="keywords" content="Dhairya Rajyaguru, Portfolio, Software Developer, Python, Data Analysis, MCA, BCA, Atmiya University, J.G. University, Rajkot">
     <meta name="author" content="Dhairya Rajyaguru">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portfolio-ivory-omega-37b26ir96l.vercel.app/">
+    <meta property="og:site_name" content="Dhairya Rajyaguru Portfolio">
     <meta property="og:title" content="Dhairya Rajyaguru | Portfolio">
     <meta property="og:description" content="Explore projects, experience, and skills of Dhairya Rajyaguru — aspiring software developer passionate about Python and data analysis.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dhairya Rajyaguru | Portfolio">
+    <meta name="twitter:description" content="Aspiring software developer focused on Python, data analysis, and real-world project work.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- Favicon and app icons -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +37,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons for Modern SVG Graphics -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
@@ -36,7 +51,7 @@
     <!-- Navigation Header -->
     <header class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
+            <a href="#hero" class="logo" aria-label="Go to top of page">
                 <span class="logo-accent"><</span>Dhairya<span class="logo-accent"> /></span>
             </a>
             
@@ -53,11 +68,11 @@
             </nav>
 
             <div class="nav-actions">
-                <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme" aria-pressed="false">
                     <i data-lucide="sun" class="sun-icon"></i>
                     <i data-lucide="moon" class="moon-icon"></i>
                 </button>
-                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="navMenu">
                     <i data-lucide="menu" class="menu-icon"></i>
                     <i data-lucide="x" class="close-icon hidden"></i>
                 </button>
@@ -87,10 +102,10 @@
                         <span>View My Work</span>
                         <i data-lucide="arrow-right" class="btn-icon"></i>
                     </a>
-                    <button onclick="window.print()" class="btn btn-secondary">
+                    <a href="resume.pdf" download="Dhairya-Rajyaguru-Resume.pdf" class="btn btn-secondary" aria-label="Download résumé as PDF">
                         <i data-lucide="download" class="btn-icon"></i>
                         <span>Get Resume</span>
-                    </button>
+                    </a>
                 </div>
                 <div class="social-links">
                     <a href="mailto:dhairyrajyaguru01@gmail.com" class="social-icon" aria-label="Email Address">
@@ -99,7 +114,7 @@
                     <a href="tel:+919265780260" class="social-icon" aria-label="Phone Number">
                         <i data-lucide="phone"></i>
                     </a>
-                    <a href="https://github.com/dhairyrajyaguru99" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
+                    <a href="https://github.com/dhairyarajyaguru-coder" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
                         <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.435.375.81 1.096.81 2.21 0 1.595-.015 2.875-.015 3.265 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12z" /></svg>
                     </a>
                     <a href="https://www.linkedin.com/in/dhairyrajyaguru" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
@@ -637,7 +652,7 @@
                             </div>
                             <div class="info-text">
                                 <span class="info-label">GitHub</span>
-                                <a href="https://github.com/dhairyrajyaguru99" target="_blank" rel="noopener noreferrer" class="info-link">github.com/dhairyrajyaguru99</a>
+                                <a href="https://github.com/dhairyarajyaguru-coder" target="_blank" rel="noopener noreferrer" class="info-link">github.com/dhairyarajyaguru-coder</a>
                             </div>
                         </div>
 
@@ -655,7 +670,7 @@
                     <div class="contact-social-row">
                         <span class="contact-social-label">Connect with me</span>
                         <div class="contact-social-links">
-                            <a href="https://github.com/dhairyrajyaguru99" target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="GitHub Profile">
+                            <a href="https://github.com/dhairyarajyaguru-coder" target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="GitHub Profile">
                                 <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.435.375.81 1.096.81 2.21 0 1.595-.015 2.875-.015 3.265 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12z" /></svg>
                                 <span>GitHub</span>
                             </a>
@@ -735,7 +750,7 @@
                 <p>&copy; 2026 Dhairya Rajyaguru. All Rights Reserved.</p>
             </div>
             <div class="footer-social-links">
-                <a href="https://github.com/dhairyrajyaguru99" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="GitHub">
+                <a href="https://github.com/dhairyarajyaguru-coder" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="GitHub">
                             <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.435.375.81 1.096.81 2.21 0 1.595-.015 2.875-.015 3.265 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12z" /></svg>
                 </a>
                 <a href="https://www.linkedin.com/in/dhairyrajyaguru" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="LinkedIn">
@@ -752,6 +767,6 @@
     </footer>
 
     <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

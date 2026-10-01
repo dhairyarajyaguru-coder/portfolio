@@ -30,7 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function updateThemeToggleUI(theme) {
-        // Redundant check in case we want to customize specific toggles or styles
+        const isLight = theme === 'light-theme';
+        themeToggleBtn.setAttribute('aria-pressed', String(isLight));
+        themeToggleBtn.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
     }
 
     // ==========================================================================
@@ -41,8 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = mobileToggle.querySelector('.menu-icon');
     const closeIcon = mobileToggle.querySelector('.close-icon');
 
-    mobileToggle.addEventListener('click', () => {
-        const isOpen = navMenu.classList.toggle('open');
+    function setMobileMenuState(isOpen) {
+        navMenu.classList.toggle('open', isOpen);
+        navMenu.hidden = !isOpen;
+        navMenu.setAttribute('aria-hidden', String(!isOpen));
+        mobileToggle.setAttribute('aria-expanded', String(isOpen));
+
         if (isOpen) {
             menuIcon.classList.add('hidden');
             closeIcon.classList.remove('hidden');
@@ -50,16 +56,54 @@ document.addEventListener('DOMContentLoaded', () => {
             menuIcon.classList.remove('hidden');
             closeIcon.classList.add('hidden');
         }
+    }
+
+    if (window.innerWidth <= 768) {
+        navMenu.hidden = true;
+    }
+
+    mobileToggle.addEventListener('click', () => {
+        const isOpen = !navMenu.classList.contains('open');
+        setMobileMenuState(isOpen);
     });
 
     // Close mobile menu when a nav link is clicked
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            navMenu.classList.remove('open');
-            menuIcon.classList.remove('hidden');
-            closeIcon.classList.add('hidden');
+            if (window.innerWidth <= 768) {
+                setMobileMenuState(false);
+            }
+            navLinks.forEach(item => item.classList.remove('active'));
+            link.classList.add('active');
         });
+    });
+
+    document.addEventListener('click', (event) => {
+        if (window.innerWidth > 768) return;
+        const clickedInsideMenu = navMenu.contains(event.target);
+        const clickedToggle = mobileToggle.contains(event.target);
+        if (!clickedInsideMenu && !clickedToggle && navMenu.classList.contains('open')) {
+            setMobileMenuState(false);
+        }
+    });
+
+    window.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && navMenu.classList.contains('open')) {
+            setMobileMenuState(false);
+            mobileToggle.focus();
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            setMobileMenuState(false);
+            navMenu.hidden = false;
+            navMenu.setAttribute('aria-hidden', 'false');
+        } else {
+            navMenu.hidden = !navMenu.classList.contains('open');
+            navMenu.setAttribute('aria-hidden', String(!navMenu.classList.contains('open')));
+        }
     });
 
     // ==========================================================================
@@ -117,16 +161,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Toggle back to top visibility
-        if (window.scrollY > 500) {
+        if (backToTopBtn && window.scrollY > 500) {
             backToTopBtn.classList.add('visible');
-        } else {
+        } else if (backToTopBtn) {
             backToTopBtn.classList.remove('visible');
         }
     });
 
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
     // ==========================================================================
     // Dynamic Hero Typing Effect
@@ -243,6 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 populateModal(data);
                 projectModal.classList.remove('hidden');
                 document.body.style.overflow = 'hidden'; // Stop background scrolling
+                modalClose.focus();
             }
         });
     });
@@ -278,7 +325,9 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
 
-    modalClose.addEventListener('click', closeModal);
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+    }
     
     // Close modal by clicking outside the card
     projectModal.addEventListener('click', (e) => {

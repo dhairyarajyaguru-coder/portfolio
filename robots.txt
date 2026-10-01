@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-ivory-omega-37b26ir96l.vercel.app/sitemap.xml
