@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0b1020">
+    <script>
+        (function () {
+            try {
+                const storedTheme = localStorage.getItem('theme');
+                const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+                const theme = storedTheme || (prefersLight ? 'light-theme' : 'dark-theme');
+                document.documentElement.classList.add(theme);
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (error) {
+                document.documentElement.classList.add('dark-theme');
+            }
+        })();
+    </script>
     <title>Dhairya Rajyaguru | Portfolio - Software Developer & MCA Student</title>
     <link rel="canonical" href="https://portfolio-ivory-omega-37b26ir96l.vercel.app/">
     
@@ -44,9 +57,11 @@
 </head>
 <body class="dark-theme">
     <!-- Abstract Background Effects -->
-    <div class="bg-glow bg-glow-1"></div>
-    <div class="bg-glow bg-glow-2"></div>
-    <div class="bg-glow bg-glow-3"></div>
+    <div class="bg-layer" aria-hidden="true">
+        <div class="bg-glow bg-glow-1"></div>
+        <div class="bg-glow bg-glow-2"></div>
+        <div class="bg-glow bg-glow-3"></div>
+    </div>
 
     <!-- Navigation Header -->
     <header class="navbar">

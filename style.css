@@ -81,13 +81,21 @@
 
 html {
     overflow-x: hidden;
+    overflow-x: clip;
     scroll-behavior: smooth;
 }
 
 html,
 body {
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+}
+
+main {
     width: 100%;
     max-width: 100%;
+    overflow-x: clip;
 }
 
 section[id] {
@@ -101,7 +109,24 @@ body {
     font-weight: 400;
     line-height: 1.6;
     overflow-x: hidden;
+    overflow-x: clip;
+    position: relative;
     transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+@supports not (overflow-x: clip) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+}
+
+.bg-layer {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
 }
 
 img,
@@ -148,11 +173,12 @@ a {
 /* Abstract Glowing Blobs */
 .bg-glow {
     position: absolute;
-    width: 30vw;
-    height: 30vw;
-    min-width: 300px;
+    width: clamp(120px, 22vw, 220px);
+    height: clamp(120px, 22vw, 220px);
+    max-width: 220px;
+    min-width: 120px;
     border-radius: 50%;
-    filter: blur(150px);
+    filter: blur(90px);
     opacity: 0.15;
     z-index: -1;
     pointer-events: none;
@@ -167,21 +193,21 @@ a {
 .bg-glow-1 {
     background-color: var(--color-primary);
     top: 5%;
-    left: -10%;
+    left: -40px;
     animation-delay: 0s;
 }
 
 .bg-glow-2 {
     background-color: var(--color-secondary);
     top: 45%;
-    right: -10%;
+    right: -40px;
     animation-delay: 5s;
 }
 
 .bg-glow-3 {
     background-color: var(--color-accent);
     bottom: 5%;
-    left: 15%;
+    left: 12%;
     animation-delay: 10s;
 }
 
@@ -1751,8 +1777,10 @@ footer {
    ========================================================================== */
 @media (max-width: 992px) {
     .bg-glow {
-        min-width: 0;
-        max-width: 100vw;
+        width: clamp(110px, 25vw, 180px);
+        height: clamp(110px, 25vw, 180px);
+        max-width: 180px;
+        min-width: 96px;
     }
 
     .section-padding {
@@ -1831,9 +1859,16 @@ footer {
     }
 
     .bg-glow {
-        width: 55vw;
-        min-width: 160px;
+        width: clamp(90px, 32vw, 160px);
+        height: clamp(90px, 32vw, 160px);
+        max-width: 160px;
+        min-width: 90px;
+        filter: blur(70px);
     }
+
+    .bg-glow-1 { left: -28px; }
+    .bg-glow-2 { right: -28px; }
+    .bg-glow-3 { left: 10%; }
 
     .section-padding {
         padding: 72px 16px;
@@ -1969,11 +2004,16 @@ footer {
     }
 
     .hero-title {
-        font-size: 32px;
+        font-size: clamp(30px, 9vw, 32px);
+        max-width: 100%;
     }
 
     .hero-subtitle {
-        font-size: 19px;
+        font-size: clamp(18px, 6vw, 20px);
+        line-height: 1.3;
+        max-width: 100%;
+        white-space: normal;
+        overflow-wrap: break-word;
     }
 
     .hero-actions {
@@ -2005,11 +2045,26 @@ footer {
     }
 
     .nav-container {
-        padding: 0 16px;
+        padding: 0 12px;
+        gap: 8px;
     }
 
     .logo {
-        font-size: 20px;
+        font-size: 18px;
+        max-width: 48%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .nav-actions {
+        gap: 8px;
+    }
+
+    .theme-toggle-btn,
+    .mobile-toggle {
+        width: 38px;
+        height: 38px;
     }
 }
 

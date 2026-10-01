@@ -11,29 +11,50 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     const themeToggleBtn = document.getElementById('themeToggle');
     const body = document.body;
-    
-    // Check local storage for saved theme preference, default to dark
-    const savedTheme = localStorage.getItem('theme') || 'dark-theme';
-    body.className = savedTheme;
-    updateThemeToggleUI(savedTheme);
+    const html = document.documentElement;
+    let userThemePreference = localStorage.getItem('theme') !== null;
 
-    themeToggleBtn.addEventListener('click', () => {
-        if (body.classList.contains('dark-theme')) {
-            body.classList.replace('dark-theme', 'light-theme');
-            localStorage.setItem('theme', 'light-theme');
-            updateThemeToggleUI('light-theme');
-        } else {
-            body.classList.replace('light-theme', 'dark-theme');
-            localStorage.setItem('theme', 'dark-theme');
-            updateThemeToggleUI('dark-theme');
-        }
-    });
+    function applyTheme(theme) {
+        html.classList.remove('dark-theme', 'light-theme');
+        body.classList.remove('dark-theme', 'light-theme');
+        html.classList.add(theme);
+        body.classList.add(theme);
+        html.setAttribute('data-theme', theme);
+        updateThemeToggleUI(theme);
+    }
 
     function updateThemeToggleUI(theme) {
         const isLight = theme === 'light-theme';
         themeToggleBtn.setAttribute('aria-pressed', String(isLight));
         themeToggleBtn.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
     }
+
+    const savedTheme = localStorage.getItem('theme');
+    const preferredSystemTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light-theme' : 'dark-theme';
+    const initialTheme = savedTheme || preferredSystemTheme;
+    applyTheme(initialTheme);
+
+    if (typeof window.matchMedia === 'function') {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+        const handleSystemThemeChange = (event) => {
+            if (!userThemePreference) {
+                applyTheme(event.matches ? 'light-theme' : 'dark-theme');
+            }
+        };
+
+        if (typeof mediaQuery.addEventListener === 'function') {
+            mediaQuery.addEventListener('change', handleSystemThemeChange);
+        } else if (typeof mediaQuery.addListener === 'function') {
+            mediaQuery.addListener(handleSystemThemeChange);
+        }
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+        const nextTheme = body.classList.contains('dark-theme') ? 'light-theme' : 'dark-theme';
+        userThemePreference = true;
+        localStorage.setItem('theme', nextTheme);
+        applyTheme(nextTheme);
+    });
 
     // ==========================================================================
     // Mobile Navigation Menu Toggle
